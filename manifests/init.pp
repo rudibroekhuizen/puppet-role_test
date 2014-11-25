@@ -36,6 +36,9 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test {
-
+  
+  class { 'snmp::client':
+    snmp_config => [ 'mibdirs +/usr/local/share/snmp/mibs', ],
+  }
 
 }
