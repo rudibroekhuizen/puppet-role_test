@@ -37,8 +37,10 @@
 #
 class role_test {
   
-  class { 'snmp::client':
-    snmp_config => [ 'mibdirs +/usr/local/share/snmp/mibs', ],
+  package { mail:
+    ensure          => "2.5.4",
+    provider        => gem,
+    install_options => [{"--install-dir" => "/opt/sensu/embedded/lib/ruby/gems/2.0.0/gems"}],
   }
 
 }
