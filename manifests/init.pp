@@ -37,7 +37,8 @@
 #
 class role_test (
   #$message = "Hello world"
-  $message = (hiera -c /etc/puppet/hiera.yaml classes data_source=workstation-work)
+  $hiera_config = '$confdir/hiera.yaml'
+  $message      = hiera('classes')
   ) {
 
   notice( "$message" )
