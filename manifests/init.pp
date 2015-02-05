@@ -36,11 +36,13 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $configfile   = 'logstash-snmpget-01.conf',
+  $configfile = 'logstash-snmpget-01.conf', #hiera based, without the Foreman
+  $configfile = $parameters['role_test::configfile'] #parseyaml based with the Foreman
   ) {
   # If this module is used in the Foreman:
   $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')) 
-  $configfile = $parameters['role_test::configfile']
+  
+  
   $hiera = hiera('role_test::configfile')
   
   notice( "$configfile" )
