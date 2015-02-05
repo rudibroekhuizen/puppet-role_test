@@ -40,6 +40,6 @@ class role_test (
   $hiera_config = '$confdir/hiera.yaml'
   $message      = hiera('classes')
   ) {
-
+  notice( "$hiera_config" )
   notice( "$message" )
 }
