@@ -36,7 +36,8 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $hiera_config = '$confdir/hiera.yaml'
+  #$hiera_config = '$confdir/hiera.yaml'
+  $hiera_config = '$basemodulepath/hiera.yaml'
   ) {
   notice( "$hiera_config" )
   notice( hiera('classes') )
