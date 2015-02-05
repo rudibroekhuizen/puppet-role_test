@@ -36,9 +36,9 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $message = "Hello world"
+  #$message = "Hello world"
+  $message = hiera -c /etc/puppet/hiera.yaml classes data_source=workstation-work
   ) {
-  
+
   notice( "$message" )
-  
 }
