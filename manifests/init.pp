@@ -40,7 +40,10 @@ class role_test (
   ) {
   
   $configfile = $parameters['role_test::configfile']
+  $hiera = hiera('role_test::configfile')
+  
   notice( "$configfile" )
+  notice( "$hiera" )
 }
 
  
