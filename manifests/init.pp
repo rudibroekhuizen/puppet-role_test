@@ -38,7 +38,7 @@
 class role_test (
   #$hiera_config = '$confdir/hiera.yaml'
   #$hiera_config = '$basemodulepath/hiera.yaml'
-  $hiera_confid = '/etc/puppet/environments/production/modules/role_test/files/hiera.yaml'
+  #$hiera_config = '/etc/puppet/environments/production/modules/role_test/files/hiera.yaml'
   ) {
   notice( "$confdir" )
   notice( "$basemodulepath" )
