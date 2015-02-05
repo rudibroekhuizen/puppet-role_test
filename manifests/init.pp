@@ -41,7 +41,7 @@ class role_test (
  
   ) {
  
-  $configfile = $parameters['role_test::configfile'] #parseyaml based with the Foreman 
+  #$configfile = $parameters['role_test::configfile'] #parseyaml based with the Foreman 
   
   notice( "$configfile" )
   notice( "$hiera" )
