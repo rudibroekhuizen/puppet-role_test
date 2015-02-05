@@ -36,12 +36,19 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  #$hiera_config = '$confdir/hiera.yaml'
-  #$hiera_config = '$basemodulepath/hiera.yaml'
-  #$hiera_config = '/etc/puppet/environments/production/modules/role_test/files/hiera.yaml'
+  $data = {
+    'waldorf' => {
+        'heckles' => 'absolutely',
+        'comment' => 'a critic',
+    },
+    'statler' => {
+        'heckles' => 'all the time',
+        'comment' => 'another critic!',
+    },
+}
+  # rename and filter on the 'heckles' key
+  $yaml = inline_template('<%= data.inject({}) {|h, (x,y)| h[x] = {"applauds" => y.fetch("heckles", "yes")}; h}.to_yaml %>')
+  $output = parseyaml($yaml) # parseyaml is in the puppetlabs-stdlib
   ) {
-  notice( "$confdir" )
-  notice( "$basemodulepath" )
-  notice( "$hiera_config" )
-  notice( hiera('classes') )
+  notice($output)
 }
