@@ -39,7 +39,7 @@ class role_test (
   $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')) 
   ) {
   
-  $configfile = $parameters['role_test::configfile']
+  $configfile = hiera('role_test::configfile', $parameters['role_test::configfile'])
   $hiera = hiera('role_test::configfile')
   
   notice( "$configfile" )
