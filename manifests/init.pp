@@ -36,7 +36,7 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $yaml = parseyaml(file('/etc/puppet/hiera.yaml')) 
+  $yaml = parseyaml(file('/etc/puppet/hieradata/server-nbc-snmp.yaml')) 
   ) {
   
   notice( "$yaml" )
