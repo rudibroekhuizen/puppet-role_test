@@ -35,14 +35,10 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class role_test {
+class role_test (
+  $message = "Hello world"
+  ) {
   
-  package { mail:
-    ensure          => "2.5.4",
-    provider        => gem,
-    install_options => [{"--install-dir" => "/tmp"}],
-    #install_options => [{"--install-dir" => "/opt/sensu/embedded/lib/ruby/gems/2.0.0/gems"}],
-    
-  }
-
+  notice( "$message" )
+  
 }
