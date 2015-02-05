@@ -40,8 +40,6 @@ class role_test (
   ) {
   
   $configfile = $parameters['role_test::configfile']
-  
-  notice( "$yaml" )
   notice( "$configfile" )
 }
 
