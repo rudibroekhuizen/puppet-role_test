@@ -35,14 +35,9 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class role_test (
-  $yaml = '
-  classes:
-  - role_base
-  - role_elasticsearch'
- ) {
+class role_test {
 
-  parseyaml($yaml)
+  parseyaml(file('/etc/puppet/hiera.yaml'))
   
   }
 
