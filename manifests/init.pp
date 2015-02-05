@@ -35,10 +35,11 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class role_test {
-
-  parseyaml(file('/etc/puppet/hiera.yaml'))
+class role_test (
+  $yaml = parseyaml(file('/etc/puppet/hiera.yaml')) 
+  ) {
   
-  }
+  notice( "$yaml" )
+}
 
  
