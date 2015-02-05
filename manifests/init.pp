@@ -39,6 +39,7 @@ class role_test (
   #$hiera_config = '$confdir/hiera.yaml'
   $hiera_config = '$basemodulepath/hiera.yaml'
   ) {
+  notice( "$confdir" )
   notice( "$basemodulepath" )
   notice( "$hiera_config" )
   notice( hiera('classes') )
