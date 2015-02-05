@@ -35,20 +35,10 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class role_test (
-  $data = {
-    'waldorf' => {
-        'heckles' => 'absolutely',
-        'comment' => 'a critic',
-    },
-    'statler' => {
-        'heckles' => 'all the time',
-        'comment' => 'another critic!',
-    },
-}
-  # rename and filter on the 'heckles' key
-  $yaml = inline_template('<%= data.inject({}) {|h, (x,y)| h[x] = {"applauds" => y.fetch("heckles", "yes")}; h}.to_yaml %>')
-  $output = parseyaml($yaml) # parseyaml is in the puppetlabs-stdlib
-  ) {
-  notice($output)
-}
+class role_test {
+
+  parseyaml($classes)
+  
+  }
+
+ 
