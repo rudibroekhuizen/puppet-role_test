@@ -36,10 +36,13 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $yaml = parseyaml(file('/etc/puppet/hieradata/server-nbc-snmp.yaml')) 
+  $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')) 
+  $configfile = $parameters['role_test::configfile']
+  $yaml       = parseyaml(file('/etc/puppet/hieradata/server-nbc-snmp.yaml')) 
   ) {
   
   notice( "$yaml" )
+  notice( "$configfile" )
 }
 
  
