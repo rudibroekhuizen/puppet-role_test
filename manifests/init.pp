@@ -37,9 +37,10 @@
 #
 class role_test (
   $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')) 
-  $configfile = $parameters['role_test::configfile']
   $yaml       = parseyaml(file('/etc/puppet/hieradata/server-nbc-snmp.yaml')) 
   ) {
+  
+  $configfile = $parameters['role_test::configfile']
   
   notice( "$yaml" )
   notice( "$configfile" )
