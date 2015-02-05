@@ -36,10 +36,8 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  #$message = "Hello world"
   $hiera_config = '$confdir/hiera.yaml'
-  $message      = hiera('classes')
   ) {
   notice( "$hiera_config" )
-  notice( "$message" )
+  notice( hiera('classes') )
 }
