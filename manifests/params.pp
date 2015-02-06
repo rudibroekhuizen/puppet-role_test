@@ -6,11 +6,11 @@ class role_test::params {
   
   case $deployment {
     'foreman': {
-      notice( "foreman" ),
+      notice( "foreman" )
       #$configfile = $parameters['role_test::configfile'],
     }
     'masterless': {
-       notice( "masterless" ),
+       notice( "masterless" )
       #$configfile = 'logstash-snmpget-01.conf',
     }
   }
