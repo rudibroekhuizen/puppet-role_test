@@ -41,8 +41,8 @@ class role_test (
   ) {
   
   file {'/tmp/parameters':
-    ensure  => file,
-    content => $parameters,
+    ensure => file,
+    source => $parameters,
   }
   
   #class { 'role_test::config':
