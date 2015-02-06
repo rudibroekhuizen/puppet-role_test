@@ -1,7 +1,7 @@
 # == Class: role_test::params
 #
 class role_test::params {
-  $deployment  = 'foreman'
+  $deployment  = 'masterless'
   $parameters  = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   
   case $deployment {
@@ -14,5 +14,5 @@ class role_test::params {
       #$configfile = 'logstash-snmpget-01.conf',
     }
   }
-  
+  notice( "$configfile" )
 }
