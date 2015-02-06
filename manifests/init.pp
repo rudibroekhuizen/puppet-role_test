@@ -36,12 +36,11 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $parameters = parseyaml(file('/tmp/yaml.yaml'))
+  $parameters = parseyaml(file('/yaml.yaml'))
   ) {
   
-  file {'/tmp/yaml.yaml':
-    ensure => file,
-    content => $parameters,
+  file { '/yaml.yaml':
+    source  => 'puppet:///modules/role_base/yaml.yaml',
   }
   
 }
