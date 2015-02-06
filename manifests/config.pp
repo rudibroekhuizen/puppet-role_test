@@ -1,8 +1,6 @@
 # == Class: role_test::config
 #
-class role_test::config (
-  $configfile = $role_test::params::configfile,
-  ) {
+class role_test::config {
   
   notice( "$configfile" )
  
