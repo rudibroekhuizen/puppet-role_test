@@ -36,16 +36,12 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $deployment = 'foreman',
-  $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
+  $parameters = parseyaml(file('/tmp/yaml.yaml'))
   ) {
   
-  file {'/tmp/parameters':
+  file {'/tmp/yaml.yaml':
     ensure => file,
     content => $parameters,
   }
   
-  #class { 'role_test::config':
-  #}
-
 }
