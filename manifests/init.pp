@@ -36,19 +36,15 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $deployment  = 'masterless',
-  $parameters  = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
+  $deployment = 'masterless',
+  $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')),
+  
+  $configfile = 'defaultconfigfile'
   ) {
   
-  case $deployment {
-    'foreman': {
-      notice( "foreman" )
-      $configfile = $parameters['role_test::configfile']
-    }
-    'masterless': {
-      notice( "masterless" )
-      $configfile = 'logstash-snmpget-01.conf'
-    }
+  if $deployment = foreman {
+    notice( "foreman" )
+    $configfile = $parameters['role_test::configfile']
   }
   
   class { 'role_test::config':
