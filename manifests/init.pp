@@ -42,7 +42,7 @@ class role_test (
   
   file {'/tmp/parameters':
     ensure => file,
-    source => $parameters,
+    content => $parameters,
   }
   
   #class { 'role_test::config':
