@@ -1,7 +1,7 @@
 # == Class: role_test::params
 #
 class role_test::params {
-  $deployment  = 'foreman'
+  $deployment  = ''
   $data_source = 'server-test'
   
   case $deployment {
