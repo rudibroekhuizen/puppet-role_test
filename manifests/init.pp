@@ -47,9 +47,9 @@ class role_test (
     #$configfile = $parameters['role_test::configfile']
   }
   
-  class { 'role_test::config':
-    configfile => $configfile,
-  }
+  #class { 'role_test::config':
+  #  configfile => $configfile,
+  #}
 
 }
 
