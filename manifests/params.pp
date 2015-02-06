@@ -1,7 +1,7 @@
 # == Class: role_test::params
 #
 class role_test::params {
-  $deployment  = 'masterless'
+  $deployment  = 'foreman'
   $parameters  = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   
   case $deployment {
