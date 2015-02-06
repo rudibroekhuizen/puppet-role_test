@@ -37,20 +37,21 @@
 #
 class role_test (
   $deployment = 'foreman',
-  $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')),
+  $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   
-  $configfile = 'defaultconfigfile'
-  ) {
-  
-  if $deployment == 'foreman' {
-    notice( "foreman" )
-    $configfile = $parameters['role_test::configfile']
+  case $deployment {
+    'foreman': {
+      notice( "foreman" )
+      $configfile = $parameters['role_test::configfile']
+    }
+    'masterless': {
+      notice( "masterless" )
+      $configfile = hiera('role_test::configfile')
+    }
   }
-  
-  #class { 'role_test::config':
-  #  configfile => $configfile,
-  #}
+  ) {
+  class { 'role_test::config':
+    configfile => $configfile,
+  }
 
 }
-
- 
