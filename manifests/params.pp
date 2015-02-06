@@ -14,4 +14,6 @@ class role_test::params {
     }
   }
   
+  notice( "$deployment" )
+  
 }
