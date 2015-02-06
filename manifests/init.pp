@@ -36,7 +36,7 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $deployment  = 'masterless'
+  $deployment  = 'masterless',
   $parameters  = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   ) {
   
