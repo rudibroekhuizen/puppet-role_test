@@ -6,7 +6,7 @@ class role_test::params {
   
   case $deployment {
     'foreman': { 
-      $parameters = parseyaml(file('/etc/puppet/hieradata/${$data_source}.yaml')),
+      $parameters = parseyaml(file('/etc/puppet/hieradata/${$data_source}.yaml'))
       $configfile = $parameters['role_test::configfile']
     }
     'masterless': {
