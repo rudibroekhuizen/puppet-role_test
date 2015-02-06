@@ -45,6 +45,7 @@ class role_test (
   #notice( "$configfile" )
   
   include role_test::config
+  include role_test::params
   
 }
 
