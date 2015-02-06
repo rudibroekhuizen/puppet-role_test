@@ -5,5 +5,5 @@ class role_test::config (
   ) {
   
   notice( "$configfile" )
-  notice( "config.pp" )
+
 }
