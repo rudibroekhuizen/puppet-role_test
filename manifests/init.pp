@@ -42,7 +42,7 @@ class role_test (
   $configfile = 'defaultconfigfile'
   ) {
   
-  if $deployment = foreman {
+  if $deployment = masterless {
     notice( "foreman" ),
     #$configfile = $parameters['role_test::configfile']
   }
