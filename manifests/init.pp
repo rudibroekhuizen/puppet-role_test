@@ -43,7 +43,7 @@ class role_test (
   ) {
   
   if $deployment = foreman {
-    notice( "foreman" )
+    notice( "foreman" ),
     $configfile = $parameters['role_test::configfile']
   }
   
