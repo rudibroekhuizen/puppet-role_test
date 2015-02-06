@@ -4,4 +4,5 @@ class role_test::config {
   
   notice( "$configfile" )
   notice( $deployment )
+  notice( "bla" )
 }
