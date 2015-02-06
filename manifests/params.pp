@@ -2,11 +2,10 @@
 #
 class role_test::params {
   $deployment  = 'masterless'
-  $data_source = 'server-test'
+  $parameters  = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   
   case $deployment {
     'foreman': { 
-      $parameters = parseyaml(file('/etc/puppet/hieradata/${$data_source}.yaml'))
       $configfile = $parameters['role_test::configfile']
     }
     'masterless': {
