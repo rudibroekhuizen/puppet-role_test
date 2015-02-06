@@ -40,7 +40,12 @@ class role_test (
   $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   ) {
   
-  class { 'role_test::config':
+  file {'/tmp/parameters':
+    ensure  => file,
+    content => $parameters,
   }
+  
+  #class { 'role_test::config':
+  #}
 
 }
