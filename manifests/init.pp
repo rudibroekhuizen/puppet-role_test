@@ -38,6 +38,7 @@
 class role_test (
   $deployment = 'foreman',
   $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
+  ) {
   
   case $deployment {
     'foreman': {
@@ -49,7 +50,7 @@ class role_test (
       $configfile = hiera('role_test::configfile')
     }
   }
-  ) {
+  
   class { 'role_test::config':
     configfile => $configfile,
   }
