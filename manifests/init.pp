@@ -35,18 +35,23 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class role_test (
-  $configfile = $role_test::params::configfile,
-  #$parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml')), #parseyaml if the Foreman is used
-  ) {
- 
-  #$configfile = $parameters['role_test::configfile'] #parseyaml if the Foreman is used
+class role_test {
+  $deployment  = 'masterless'
+  $parameters  = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
   
-  #notice( "$configfile" )
+  case $deployment {
+    'foreman': {
+      notice( "foreman" )
+      $configfile = $parameters['role_test::configfile']
+    }
+    'masterless': {
+      notice( "masterless" )
+      $configfile = 'logstash-snmpget-01.conf'
+    }
+  }
   
   include role_test::config
-  include role_test::params
-  
+ 
 }
 
  
