@@ -51,7 +51,7 @@ class role_test {
   }
   
   class { 'role_test::config':
-    configfile => $::configfile,
+    configfile => $configfile,
   }
   
   notice( "$configfile" )
