@@ -51,7 +51,7 @@ class role_test {
   }
   
   include role_test::config
- 
+  notice( "$configfile" )
 }
 
  
