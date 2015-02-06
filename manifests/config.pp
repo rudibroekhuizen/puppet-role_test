@@ -1,7 +1,7 @@
 # == Class: role_test::config
 #
 class role_test::config (
-  #$configfile,
+  $configfile = hhh,
   ) {
   
   notice( "$configfile" )
