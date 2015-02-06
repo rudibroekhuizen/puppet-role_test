@@ -47,7 +47,7 @@ class role_test (
     }
     'masterless': {
       notice( "masterless" )
-      $configfile = 'logstash-snmpget-01.conf'
+      $configfile = hiera('role_test::configfile')
     }
   }
   
