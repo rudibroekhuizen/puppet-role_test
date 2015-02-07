@@ -36,7 +36,7 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $yamlfile = bladiebla.yaml,
+  $yamlfile = 'bladiebla.yaml',
   ) {
   
   file { '/yaml.yaml':
