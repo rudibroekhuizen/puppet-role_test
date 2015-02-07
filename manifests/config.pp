@@ -7,7 +7,7 @@ class role_test::config (
   notice( "$configfile" )
   
   file { "/tmp/configfile":
-    content => "$str",
+    content => "$configfile",
   }
 
 }
