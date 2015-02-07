@@ -40,7 +40,7 @@ class role_test (
   ) {
   
   file { '/yaml.yaml':
-    source => 'puppet:///modules/role_base/yaml.yaml',
+    source => 'puppet:///modules/role_test/yaml.yaml',
   }
   
 }
