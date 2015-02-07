@@ -42,7 +42,6 @@ class role_test (
   file { '/yaml.yaml':
     source => 'puppet:///modules/role_test/yaml.yaml',
   }
-  #class { 'role_test::config':
-  #  configfile => $configfile,
-  #}
+  class { 'role_test::config':
+  }
 }
