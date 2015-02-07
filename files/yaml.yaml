@@ -3,4 +3,4 @@ classes:
   - role_elasticsearch
 
 role_test::configfile:
-  logstash-test-02.conf
+  yaml.yaml
