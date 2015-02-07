@@ -35,8 +35,7 @@
 #
 # Copyright 2014 Your name here, unless otherwise noted.
 #
-class role_test (
-  ) {
+class role_test {
   
   $parameters = parseyaml('
 ---
