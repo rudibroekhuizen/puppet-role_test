@@ -6,6 +6,7 @@ class role_test {
 ---
 role_test::configfile:
   example.yaml
+---
 ')
   
   class { 'role_test::config':
