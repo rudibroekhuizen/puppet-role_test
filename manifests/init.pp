@@ -43,7 +43,7 @@ class role_test (
     source => 'puppet:///modules/role_test/yaml.yaml',
   } ->
   
-  $parameters = parseyaml(file('/yaml.yaml'))
+  $parameters == parseyaml(file('/yaml.yaml'))
   
   class { 'role_test::config':
   }
