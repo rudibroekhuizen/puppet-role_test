@@ -43,7 +43,8 @@ role_test::configfile:
 ---
 ') {
 
-parameters = parseyaml($yaml)
+$parameters = parseyaml($yaml)
+notice( "$configfile" )  
   
   class { 'role_test::config':
   }
