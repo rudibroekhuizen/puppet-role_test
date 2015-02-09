@@ -36,25 +36,14 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $deployment = 'foreman',
-  $parameters = parseyaml(file('/etc/puppet/hieradata/server-test.yaml'))
-  ) {
-  
-  case $deployment {
-    'foreman': {
-      notice( "foreman" )
-      $configfile = $parameters['role_test::configfile']
-    }
-    'masterless': {
-      notice( "masterless" )
-      $configfile = hiera('role_test::configfile')
-    }
-  }
+  $parameters = parseyaml('
+---
+role_test::configfile:
+  example.yaml
+---
+')) {
   
   class { 'role_test::config':
-    configfile => $configfile,
   }
-
+  
 }
-
- 
