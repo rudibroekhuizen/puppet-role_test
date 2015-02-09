@@ -1,9 +1,13 @@
 # == Class: role_test::config
 #
 class role_test::config (
-  $configfile,
+  $configfile = $role_test::parameters['role_test::configfile']
   ) {
   
   notice( "$configfile" )
+  
+  file { "/tmp/configfile":
+    content => "$configfile",
+  }
 
 }
