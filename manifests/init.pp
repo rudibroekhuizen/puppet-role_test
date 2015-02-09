@@ -36,14 +36,14 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $yaml = '
+  $data_source = '
 ---
 role_test::configfile:
   example.yaml
 ---
 ') {
 
-$parameters = parseyaml($yaml)
+$parameters = parseyaml($data_source)
 notice( "$yaml" )
 notice( "$parameters" ) 
 notice( "$configfile" )
