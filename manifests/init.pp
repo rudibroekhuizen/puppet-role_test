@@ -1,16 +1,12 @@
 # == Class: role_test
 #
-class role_test 
-#(
-#  $data_source = '
-#---
-#role_test::configfile:
-#  example.yaml
-#---
-#') 
-{
+class role_test {
 
-$parameters = parseyaml(puppet:///modules/role_test/data_source)
+  file { '/etc/puppet/hieradata/data_source.yaml':
+    source  => 'puppet:///modules/role_test/data_source',
+  }
+
+$parameters = parseyaml(/etc/puppet/hieradata/data_source.yaml)
 notice( "$data_source" )
 notice( "$parameters" ) 
 notice( "$configfile" )
