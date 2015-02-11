@@ -39,7 +39,6 @@ class role_test (
   $testfile = $role_test::yaml::parameters['role_test::configfile']
 ) {
 include role_test::yaml
-$parameters = parseyaml($role_test::yaml::yaml)
 
   class { 'role_test::config':
   }
