@@ -10,4 +10,7 @@ class role_test::config (
 
   notice( "$configfile" )
 
+  $test = parseyaml($role_test::yaml::yaml)['role_test::configfile']
+  
+  notice( "$test" )
 }
