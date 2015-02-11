@@ -39,7 +39,7 @@ class role_test (
 ) {
 include role_test::yaml
 
-$parameters = parseyaml($role_test::yaml::yaml)
+#$parameters = parseyaml($role_test::yaml::yaml)
 
 notice( "$parameters" ) 
 
