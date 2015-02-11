@@ -8,6 +8,6 @@ role_test::configfile:
 ---
 ') {
 
- 
+ $parameters = parseyaml($role_test::yaml::yaml)
 
 }
