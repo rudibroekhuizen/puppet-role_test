@@ -6,4 +6,7 @@ class role_test::yaml (
 role_test::configfile:
   example.yaml
 ---
-')
+') {
+  notice( "$yaml" )
+
+}
