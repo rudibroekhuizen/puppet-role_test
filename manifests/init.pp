@@ -42,7 +42,7 @@ include role_test::yaml
   class { 'role_test::config':
   }
   
-  file { "/tmp/configfile":
+  file { "/tmp/init":
     content => "$configfile",
   }
   
