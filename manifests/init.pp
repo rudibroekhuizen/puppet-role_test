@@ -36,7 +36,6 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $testfile = $role_test::yaml::parameters['role_test::configfile']
 ) {
 include role_test::yaml
 
@@ -44,7 +43,7 @@ include role_test::yaml
   }
   
   file { "/tmp/init":
-    content => "$testfile",
+    content => "$configfile",
   }
   
 }
