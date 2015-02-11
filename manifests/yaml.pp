@@ -8,7 +8,7 @@ role_test::configfile:
 ---
 ') {
 
-include role_test
+#include role_test
 
   notice( "$yaml" )
 
