@@ -36,24 +36,13 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $data_source = '
----
-role_test::configfile:
-  example.yaml
----
-') {
+) {
 
 include role_test::yaml
 
-#$bla = $role_test::yaml::yaml
-#notice( "$bla" )
-
-#$parameters = parseyaml($data_source)
 $parameters = parseyaml($role_test::yaml::yaml)
 
-#notice( "$data_source" )
 notice( "$parameters" ) 
-#notice( "$configfile" )
 
   class { 'role_test::config':
   }
