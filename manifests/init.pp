@@ -37,7 +37,7 @@
 #
 class role_test (
 ) {
-include role_test::yaml
+#include role_test::yaml
 
 #$parameters = parseyaml($role_test::yaml::yaml)
 
