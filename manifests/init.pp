@@ -39,11 +39,11 @@ class role_test (
 ) {
 include role_test::yaml
 
-#$parameters = parseyaml($role_test::yaml::yaml)
-
-#notice( "$parameters" ) 
-
   class { 'role_test::config':
+  }
+  
+  file { "/tmp/configfile":
+    content => "$configfile",
   }
   
 }
