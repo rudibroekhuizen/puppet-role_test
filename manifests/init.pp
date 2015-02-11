@@ -36,12 +36,14 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  $configfile = $role_test::yaml::parameters['role_test::configfile']
 ) {
 include role_test::yaml
 
+$parameters = parseyaml($role_test::yaml::yaml)
+
+notice( "$parameters" ) 
+
   class { 'role_test::config':
-    configfile => $configfile
   }
   
 }
