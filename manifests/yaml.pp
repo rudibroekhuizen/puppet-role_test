@@ -4,7 +4,7 @@ class role_test::yaml (
   $yaml = '
 ---
 role_test::configfile:
-  example.yaml
+  test.yaml
 ---
 ') {
 
