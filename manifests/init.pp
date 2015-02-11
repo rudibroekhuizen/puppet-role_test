@@ -45,8 +45,8 @@ role_test::configfile:
 
 include role_test::yaml
 
-$bla = $role_test::yaml::yaml
-notice( "$bla" )
+#$bla = $role_test::yaml::yaml
+#notice( "$bla" )
 
 #$parameters = parseyaml($data_source)
 $parameters = parseyaml($role_test::yaml::yaml)
