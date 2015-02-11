@@ -36,7 +36,6 @@
 # Copyright 2014 Your name here, unless otherwise noted.
 #
 class role_test (
-  include role_test::yaml
   $testfile = $role_test::yaml::parameters['role_test::configfile']
 ) {
 include role_test::yaml
