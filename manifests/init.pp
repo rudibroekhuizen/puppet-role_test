@@ -43,6 +43,8 @@ role_test::configfile:
 ---
 ') {
 
+include role_test::yaml
+
 $bla = $role_test::yaml::yaml
 notice( "$bla" )
 
